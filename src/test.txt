@@ -1,0 +1,35 @@
+                    <div style={{
+                        fontWeight: 600,
+                        fontFamily: "HK Grotesk",
+                        fontSize: 32,
+                        lineHeight: 1.1,
+                        padding: 20,
+                    }}>
+                        Find the recipes to your favourite meals easily
+                    </div>
+                    <div style={{
+                        fontFamily: "HK Grotesk",
+                        fontSize: 18,
+                        lineHeight: 1.2,
+                        letterSpacing: .6,
+                        padding: 20,
+                        color: "grey",
+                    }}>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione qui ipsa reiciendis, praesentium sit minima doloribus. Atque tempora dolor deserunt suscipit. Tempore, in est? Quis ea optio laudantium blanditiis dolor?
+                    </div>
+                    <a href='/' className={classes.button}>See Recipes</a>
+
+
+                    <div className='jumbotron-image'>
+                    <img src={image} style={{width: 500, height: 500}}/>
+                </div>
+
+
+                                    {meal.extendedIngredients.map((ing, index) => {
+                        return(
+                            <ul key={ing.id}>
+                                <li>{ing.name}</li>
+                                <p>{ing.original}</p>
+                            </ul>
+                        )
+                    })}
